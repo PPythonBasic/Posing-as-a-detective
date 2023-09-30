@@ -16,7 +16,7 @@ def pull_database_suspect():
     list_respone = response_json["suspects"]
    
     for i in list_respone:
-        if  i["traits"] == ["tattoo on right forearm"] and i["eye_color"] == "blue":
+        if  i["traits"] == ["smokes cigarettes"] :
             print(i["name"])
             
 
