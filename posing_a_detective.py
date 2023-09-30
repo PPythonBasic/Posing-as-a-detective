@@ -11,7 +11,12 @@ def pull_database_suspect():
     """
     ฟังก์ชันดึงข้อมูลจากฐานข้อมูลผู้ต้องสงสัย API https://ppythonbasic.github.io/apis/suspects.json
     """
-
+    response = requests.get("https://ppythonbasic.github.io/apis/suspects.json").text
+    response_json = json.loads(response)
+    list_respone = response_json["suspects"]
+    for i in list_respone:
+        if i["hair_color"] == "black" and i["eye_color"] == "brown":
+            print(i["name"],i["hair_color"])
 
 def run_code():
     pull_database_suspect()
