@@ -16,7 +16,7 @@ def pull_database_suspect():
     list_respone = response_json["suspects"]
    
     for i in list_respone:
-        if i["height"] > 180 and i["weight"] >=80:
+        if  i["traits"] == ["tattoo on right forearm"] and i["eye_color"] == "blue":
             print(i["name"])
             
 
