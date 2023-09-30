@@ -16,7 +16,7 @@ def pull_database_suspect():
     list_respone = response_json["suspects"]
    
     for i in list_respone:
-        if i["gender"] == "female":
+        if i["height"] > 180 and i["weight"] >=80:
             print(i["name"])
             
 
